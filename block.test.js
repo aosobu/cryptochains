@@ -51,8 +51,6 @@ describe('Block', ()=>{
         });
 
         it('creates a SHA-256 `hash` based on the proper inputs', () => {
-            console.log('Hash of Mined Block :: ' + minedBlock.hash);
-            console.log('CryptoHash ::' + cryptoHash(minedBlock.timestamp, lastBlock.hash, data));
             expect(minedBlock.hash)
             .toEqual(cryptoHash(minedBlock.timestamp, lastBlock.hash, data))
         });
